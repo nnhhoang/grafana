@@ -858,6 +858,14 @@ var (
 			Expression:  "false",
 		},
 		{
+			Name:        "secretsReferenceValueUI",
+			Description: "Enable referencing an existing secret in an active keeper when creating a secure value",
+			Stage:       FeatureStageExperimental,
+			Generate:    Generate{LegacyFrontend: true},
+			Owner:       grafanaOperatorExperienceSquad,
+			Expression:  "false",
+		},
+		{
 			Name:        "alertingSaveStatePeriodic",
 			Description: "Writes the state periodically to the database, asynchronous to rule evaluation",
 			Stage:       FeatureStagePrivatePreview,

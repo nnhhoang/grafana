@@ -434,6 +434,11 @@ export interface FeatureToggles {
   */
   secretsKeeperUI?: boolean;
   /**
+  * Enable referencing an existing secret in an active keeper when creating a secure value
+  * @default false
+  */
+  secretsReferenceValueUI?: boolean;
+  /**
   * Writes the state periodically to the database, asynchronous to rule evaluation
   * @default false
   */

@@ -4866,6 +4866,20 @@
     },
     {
       "metadata": {
+        "name": "secretsReferenceValueUI",
+        "resourceVersion": "1782488602777",
+        "creationTimestamp": "2026-06-26T15:43:22Z"
+      },
+      "spec": {
+        "description": "Enable referencing an existing secret in an active keeper when creating a secure value",
+        "stage": "experimental",
+        "codeowner": "@grafana/grafana-operator-experience-squad",
+        "frontend": true,
+        "expression": "false"
+      }
+    },
+    {
+      "metadata": {
         "name": "sharingDashboardImage",
         "resourceVersion": "1779440584464",
         "creationTimestamp": "2025-07-15T21:07:39Z",
