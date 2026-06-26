@@ -9,6 +9,8 @@ export type RepoType = RepositorySpec['type'];
 
 export type ConnectionType = ConnectionSpec['type'];
 
+export type GitHubBasedConnectionType = 'github' | 'githubEnterprise';
+
 export type GitHubAuthType = 'pat' | 'github-app';
 
 export type GitHubAppMode = 'existing' | 'new';

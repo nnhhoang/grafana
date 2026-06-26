@@ -4,7 +4,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 import { t, Trans } from '@grafana/i18n';
 import { Button, Field, Input, SecretTextArea, Stack } from '@grafana/ui';
 
-import { type ConnectionType } from '../../Wizard/types';
+import { type GitHubBasedConnectionType } from '../../Wizard/types';
 import { type ConnectionFormData } from '../../types';
 import { validateNoHiddenCharacters } from '../../utils/validators';
 
@@ -16,7 +16,7 @@ export interface GitHubConnectionFieldsProps {
   onNewConnectionCreation?: () => void;
   /** Whether the connection is currently being created */
   isCreating?: boolean;
-  type: ConnectionType;
+  type: GitHubBasedConnectionType;
 }
 
 export const GitHubConnectionFields = memo<GitHubConnectionFieldsProps>(

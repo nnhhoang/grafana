@@ -31,6 +31,7 @@ import { TokenPermissionsInfo } from '../Shared/TokenPermissionsInfo';
 import { getGitProviderFields, getLocalProviderFields } from '../Wizard/fields';
 import { PROVISIONING_URL } from '../constants';
 import { useConnectionOptions } from '../hooks/useConnectionOptions';
+import { useConnectionType } from '../hooks/useConnectionType';
 import { useCreateOrUpdateRepository } from '../hooks/useCreateOrUpdateRepository';
 import { type RepositoryFormData } from '../types';
 import { dataToSpec, deriveSigningKeySecret } from '../utils/data';
@@ -99,7 +100,7 @@ export function ConfigForm({ data }: ConfigFormProps) {
     options: connectionOptions,
     isLoading: connectionsLoading,
     connections,
-  } = useConnectionOptions(usesGitHubApp);
+  } = useConnectionOptions(usesGitHubApp, useConnectionType());
 
   const selectedConnection = connections.find((c) => c.metadata?.name === watchedConnectionName);
   const connectionWebhookDisabled = Boolean(selectedConnection?.spec?.webhook?.disabled);
